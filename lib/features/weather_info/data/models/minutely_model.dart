@@ -12,7 +12,7 @@ class MinutelyModel extends MinutelyEntity {
   factory MinutelyModel.fromJson(Map<String, dynamic> json) {
     return MinutelyModel(
       dt: json['dt'],
-      precipitation: json['precipitation'],
+      precipitation: json['precipitation'].toDouble(),
     );
   }
 

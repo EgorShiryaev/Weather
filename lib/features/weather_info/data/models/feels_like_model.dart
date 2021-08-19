@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:weather_mobile_app/features/weather_info/domain/entities/feelsLike.dart';
 
 class FeelsLikeModel extends FeelsLikeEntity {

@@ -1,6 +1,6 @@
 class MinutelyEntity {
   final int dt;
-  final int precipitation;
+  final double precipitation;
 
   MinutelyEntity({
     required this.dt,

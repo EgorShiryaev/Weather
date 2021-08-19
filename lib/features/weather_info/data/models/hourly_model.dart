@@ -52,7 +52,7 @@ class HourlyModel extends HourlyEntity {
       windSpeed: json['wind_speed'].toDouble(),
       windDeg: json['wind_deg'],
       weather: weather,
-      pop: json['pop'],
+      pop: json['pop'].toDouble(),
     );
   }
 

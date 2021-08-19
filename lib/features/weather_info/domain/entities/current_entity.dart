@@ -9,7 +9,7 @@ class CurrentEntity {
   final int pressure;
   final int humidity;
   final double dewPoint;
-  final int uvi;
+  final double uvi;
   final int clouds;
   final int visibility;
   final double windSpeed;
