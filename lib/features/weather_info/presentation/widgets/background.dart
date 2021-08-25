@@ -8,10 +8,10 @@ class Background extends StatelessWidget {
     return Column(
       children: [
         Image.asset("assets/images/background.jpeg"),
-        Container(
-          height: 110,
-          color: Colors.blue[200],
-        )
+        // Container(
+        //   height: 110,
+        //   color: Colors.blue[200],
+        // )
       ],
     );
   }

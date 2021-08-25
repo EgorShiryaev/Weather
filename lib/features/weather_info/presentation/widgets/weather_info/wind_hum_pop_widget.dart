@@ -41,15 +41,15 @@ class WindHumPopWidget extends StatelessWidget {
             children: [
               Icon(
                 CupertinoIcons.wind,
-                color: Colors.white,
+                color: Colors.black,
               ),
               Icon(
                 CupertinoIcons.thermometer,
-                color: Colors.white,
+                color: Colors.black,
               ),
               Icon(
                 CupertinoIcons.drop,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ],
           ),
@@ -59,19 +59,19 @@ class WindHumPopWidget extends StatelessWidget {
               Text(
                 '$windSpeed м/c $windDirection',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               Text(
                 '$newPressure мм/рт. ст.',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               Text(
                 '$humidity %',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ],

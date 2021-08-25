@@ -3,6 +3,7 @@ import 'package:weather_mobile_app/features/weather_info/domain/entities/weather
 import 'package:weather_mobile_app/features/weather_info/presentation/widgets/weather_info/app_bar_widget.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/widgets/weather_info/current_weather_widget.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/widgets/weather_info/daily_weather_widget.dart';
+import 'package:weather_mobile_app/features/weather_info/presentation/widgets/weather_info/design_by_widget.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/widgets/weather_info/hourly_weather.dart';
 
 class LoadedState extends StatelessWidget {
@@ -26,8 +27,9 @@ class LoadedState extends StatelessWidget {
       }
     }
 
-    return ListView(
+    return Column(
       children: [
+        SizedBox(height: paddingTop),
         AppBarWidget(weatherInfo: weatherInfo),
         CurrentWeatherWidget(
           temp: weatherInfo.current.temp.round(),
@@ -50,13 +52,14 @@ class LoadedState extends StatelessWidget {
             SizedBox(height: 14),
           ],
         ),
-        
         HourlyWeather(
           hourlyWeather: weatherInfo.hourly,
           current: weatherInfo.current,
         ),
         DailyWeatherWidget(dailyWeather: weatherInfo.daily),
-        
+        SizedBox(height: 24),
+        DesignByWidget(),
+        SizedBox(height: 50),
       ],
     );
   }

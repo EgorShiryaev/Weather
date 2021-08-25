@@ -28,7 +28,7 @@ class HourlyCard extends StatelessWidget {
                       hourlyWeather[index].dt * 1000,
                     ),
                   ),
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
               ],
             ),
@@ -47,7 +47,7 @@ class HourlyCard extends StatelessWidget {
                 SizedBox(width: 12),
                 Text(
                   feelsLike,
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
               ],
             ),

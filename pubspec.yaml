@@ -49,6 +49,8 @@ dependencies:
 
   intl: ^0.17.0
 
+  font_awesome_flutter: ^9.1.0
+
   # Functional programming thingles
   dartz: ^0.10.0-nullsafety.2
 
