@@ -4,6 +4,7 @@ import 'package:weather_mobile_app/core/size/size.dart';
 import 'package:weather_mobile_app/core/util/util.dart';
 import 'package:weather_mobile_app/features/weather_info/domain/entities/daily_entity.dart';
 
+// ignore: must_be_immutable
 class DailyWeatherWidget extends StatelessWidget {
   final List<DailyEntity> dailyWeather;
   DailyWeatherWidget({required this.dailyWeather});
@@ -21,6 +22,18 @@ class DailyWeatherWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: List<Widget>.generate(dailyWeather.length, (index) {
+        String dayTemp = dailyWeather[index].feelsLike.day.round().toString();
+        // ignore: unnecessary_statements
+        dailyWeather[index].feelsLike.day.round() > 0
+            ? dayTemp = '+ $dayTemp'
+            // ignore: unnecessary_statements
+            : null;
+        String nightTemp =
+            dailyWeather[index].feelsLike.night.round().toString();
+        dailyWeather[index].feelsLike.night.round() > 0
+            ? nightTemp = '+$nightTemp'
+            // ignore: unnecessary_statements
+            : null;
         return Stack(
           children: [
             Container(
@@ -32,7 +45,6 @@ class DailyWeatherWidget extends StatelessWidget {
                     padding: EdgeInsets.all(15),
                     child: Stack(
                       children: [
-    
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -48,21 +60,20 @@ class DailyWeatherWidget extends StatelessWidget {
                             Container(
                               width: SIZE.getSize(context).width * 0.2,
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: [
                                   Text(
-                                    '${dailyWeather[index].feelsLike.day.round()}°',
+                                    '$dayTemp°',
                                     style: TextStyle(fontSize: 15),
                                   ),
-                                  
                                   Text(
-                                    '${dailyWeather[index].feelsLike.night.round()}°',
+                                    '$nightTemp°',
                                     style: TextStyle(
                                       fontSize: 13,
                                       color: Colors.grey[600],
                                     ),
                                   ),
-                                  
                                 ],
                               ),
                             )
@@ -71,7 +82,9 @@ class DailyWeatherWidget extends StatelessWidget {
                       ],
                     ),
                   ),
-                  index == dailyWeather.length -1 ? Divider(height: 1) : Container(), 
+                  index == dailyWeather.length - 1
+                      ? Divider(height: 1)
+                      : Container(),
                 ],
               ),
             ),

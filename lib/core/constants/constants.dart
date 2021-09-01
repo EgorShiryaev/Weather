@@ -8,4 +8,9 @@ class Constants {
   static const String appID = "def9052cd59e809e322685d686d8f289";
 
   static const String googleApiKey = 'AIzaSyAlqN9jditePykWUuVXIlknFVT5-z_4y6Q';
+
+  static const String geocodeSputnikBaseUrl = 'http://search.maps.sputnik.ru/search/addr?q=';
+
+  static late String placeName = '';
+
 }

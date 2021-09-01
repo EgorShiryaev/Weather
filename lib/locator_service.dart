@@ -1,7 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'core/internet_checker/internet_checker.dart';
 import 'features/weather_info/data/datasources/local_datasource/weather_info_local_datasource.dart';
 import 'features/weather_info/data/datasources/remote_datasource/weather_info_remote_datasource.dart';
@@ -16,6 +15,7 @@ Future<void> init() async {
   // BLoC / Cubit
   sl.registerFactory(() => WeatherInfoCubit(getWeatherInfo: sl()));
 
+
   // UseCases
   sl.registerLazySingleton(() => GetWeatherInfo( weatherInfoRepository: sl()));
  
@@ -29,6 +29,8 @@ Future<void> init() async {
     ),
   );
 
+  
+  // DataSources
   sl.registerLazySingleton<WeatherInfoRemoteDataSource>(
     () => WeatherInfoRemoteDataSourceImpl(),
   );
@@ -36,6 +38,8 @@ Future<void> init() async {
   sl.registerLazySingleton<WeatherInfoLocalDataSource>(
     () => WeatherInfoLocalDataSourceImpl(sharedPreferences: sl()),
   );
+
+
 
   // Core
   sl.registerLazySingleton<NetworkInfo>(

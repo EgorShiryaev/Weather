@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_mobile_app/core/constants/constants.dart';
 import 'package:weather_mobile_app/features/weather_info/domain/entities/weather_info_entity.dart';
 
 import 'city_info.dart';
@@ -24,9 +25,9 @@ class AppBarWidget extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          CityInfo(namePlace: weatherInfo.timezone),
+          CityInfo(namePlace: Constants.placeName),
           IconButton(
-            onPressed: () {},
+            onPressed: () => Scaffold.of(context).openEndDrawer(),
             icon: Icon(
               Icons.search,
               color: Colors.white,
