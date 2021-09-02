@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_mobile_app/core/constants/constants.dart';
 import 'package:weather_mobile_app/core/size/size.dart';
+import 'package:weather_mobile_app/core/util/location.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/cubit/weather_info_cubit.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/cubit/weather_info_state.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/widgets/body_state/empty_state.dart';
@@ -19,7 +21,7 @@ class Body extends StatelessWidget {
         if (scrollController.position.pixels == 0) {
           context
               .read<WeatherInfoCubit>()
-              .loadWeatherInfo(55.751244, 37.618423);
+              .loadWeatherInfo(Constants.lat, Constants.long);
         }
       }
     });
@@ -58,6 +60,10 @@ class Body extends StatelessWidget {
             BlocBuilder<WeatherInfoCubit, WeatherInfoState>(
               builder: (context, state) {
                 if (state is WeatherLoadedState) {
+                  if (Constants.useGeolocator == true) {
+                    Constants.placeName = state.weatherInfo.timezone;
+                  }
+                  Constants.timezoneOffset = state.weatherInfo.timezoneOffset;
                   return LoadedState(
                     weatherInfo: state.weatherInfo,
                     paddingTop: MediaQuery.of(context).padding.top,
@@ -71,7 +77,6 @@ class Body extends StatelessWidget {
                 );
               },
             ),
-            
           ],
         ),
       ],

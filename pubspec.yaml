@@ -53,6 +53,10 @@ dependencies:
 
   google_place: ^0.4.3
 
+  geolocator: ^7.6.0
+
+  flutter_geocoder: ^0.2.2-nullsafety
+
   # Functional programming thingles
   dartz: ^0.10.0-nullsafety.2
 

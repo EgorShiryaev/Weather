@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+import 'package:weather_mobile_app/core/constants/constants.dart';
+import 'package:weather_mobile_app/core/util/location.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/widgets/end_drawer_widget.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/cubit/weather_info_cubit.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/widgets/body.dart';
@@ -11,11 +13,12 @@ class WeatherPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MultiProvider(
       providers: [
         BlocProvider<WeatherInfoCubit>(
           create: (context) =>
-              sl<WeatherInfoCubit>()..loadWeatherInfo(55.751244, 37.618423),
+              sl<WeatherInfoCubit>()..loadWeatherInfo(Constants.lat, Constants.long,),
         ),
       ],
       child: Scaffold(

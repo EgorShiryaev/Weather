@@ -5,12 +5,21 @@ class Constants {
   static const String openWeatherMapIcon =
       protokolOpenWeatherMap + openWeatherMapBaseUrl + "/img/w/";
 
-  static const String appID = "def9052cd59e809e322685d686d8f289";
+  // Зарегистрируйтесь на openweathermap.org и получите appId
+  static const String appID = "";
 
-  static const String googleApiKey = 'AIzaSyAlqN9jditePykWUuVXIlknFVT5-z_4y6Q';
+  // Зарегистрируйте googleApiKey на googlePlace
+  static const String googleApiKey = "";
 
-  static const String geocodeSputnikBaseUrl = 'http://search.maps.sputnik.ru/search/addr?q=';
+  static const String geocodeSputnikBaseUrl =
+      'http://search.maps.sputnik.ru/search/addr?q=';
 
   static late String placeName = '';
 
+  static late double lat = 0;
+  static late double long = 0;
+
+  static late bool useGeolocator = false;
+
+  static late int timezoneOffset;
 }

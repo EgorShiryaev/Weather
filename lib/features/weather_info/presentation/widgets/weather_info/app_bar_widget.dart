@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_mobile_app/core/constants/constants.dart';
+import 'package:weather_mobile_app/core/util/location.dart';
 import 'package:weather_mobile_app/features/weather_info/domain/entities/weather_info_entity.dart';
 
 import 'city_info.dart';
@@ -19,7 +20,9 @@ class AppBarWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Location().getCurrentLocation(context);
+            },
             icon: Icon(
               Icons.my_location,
               color: Colors.white,

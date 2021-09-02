@@ -41,10 +41,12 @@ class LoadedState extends StatelessWidget {
           children: [
             SizedBox(height: 15),
             warning
-                ? Text(
-                    'Через $minute минут возможно выпадение осадков',
-                    style: TextStyle(color: Colors.white, fontSize: 11),
-                  )
+                ? minute != 0
+                    ? Text(
+                        'Через $minute минут возможно выпадение осадков',
+                        style: TextStyle(color: Colors.white, fontSize: 11),
+                      )
+                    : SizedBox(height: 11)
                 : Text(
                     'В ближайший час выпадение осадков не ожидается',
                     style: TextStyle(color: Colors.white, fontSize: 11),

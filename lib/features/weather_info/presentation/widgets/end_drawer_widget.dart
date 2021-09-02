@@ -75,16 +75,18 @@ class _EndDrawerState extends State<EndDrawer> {
                   onTap: () async {
                     var uri = Uri.parse(Constants.geocodeSputnikBaseUrl +
                         '${predictions[index].description}');
-
+                    log(uri.toString());
                     var response = await http.get(uri);
                     if (response.statusCode == 200) {
                       var body = json.decode(response.body);
                       var coordinates = body['result']['address'][0]['features']
                           [0]['geometry']['geometries'][0]['coordinates'];
-
-                      BlocProvider.of<WeatherInfoCubit>(context)
-                          .loadWeatherInfo(coordinates[1], coordinates[0]);
+                      Constants.lat = coordinates[1];
+                      Constants.long = coordinates[0];
                       Constants.placeName = predictions[index].description!;
+                      Constants.useGeolocator = false;
+                      BlocProvider.of<WeatherInfoCubit>(context)
+                          .loadWeatherInfo(Constants.lat, Constants.long);
                       Navigator.pop(context);
                     }
                   },

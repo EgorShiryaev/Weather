@@ -23,11 +23,12 @@ class HourlyCard extends StatelessWidget {
               children: [
                 SizedBox(width: 12),
                 Text(
-                  Util.getFormattedTime(
-                    DateTime.fromMillisecondsSinceEpoch(
-                      hourlyWeather[index].dt * 1000,
-                    ),
-                  ),
+                  index != 0
+                      ? Util.getFormattedTime(
+                          DateTime.fromMillisecondsSinceEpoch(
+                              (hourlyWeather[index].dt + Constants.timezoneOffset - 10800) * 1000 ),
+                        )
+                      : 'Сейчас',
                   style: TextStyle(color: Colors.black),
                 ),
               ],
@@ -36,7 +37,8 @@ class HourlyCard extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: Image.network(
-              Constants.openWeatherMapIcon + hourlyWeather[index].weather[0].icon,
+              Constants.openWeatherMapIcon +
+                  hourlyWeather[index].weather[0].icon,
               scale: 0.90,
             ),
           ),
