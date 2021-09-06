@@ -36,7 +36,6 @@ class Body extends StatelessWidget {
       return ErrorState(error: state.message);
     }
     return Container(
-      color: Colors.red,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Colors.red[300],

@@ -10,10 +10,10 @@ class ErrorState extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Colors.red[300],
+          color: Colors.red,
         ),
         padding: EdgeInsets.all(15),
-        color: Colors.red,
+
         child: Text(
           error,
           style: TextStyle(color: Colors.black, fontSize: 14),
