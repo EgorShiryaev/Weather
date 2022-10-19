@@ -17,6 +17,6 @@
 - flutter pub get
 - flutter run
 
-# Скрины приложения!
-![HomePage](https://user-images.githubusercontent.com/80877621/196796431-805e8744-c329-4afc-b5d8-91b37eb46a11.png)
-![SearchPage](https://user-images.githubusercontent.com/80877621/196796377-fde33b9b-06e4-4f0e-8226-0d10837bb541.png)
+# Скрины приложения
+![HomePage](https://user-images.githubusercontent.com/80877621/196797163-94c44f83-4ab2-4e70-aca0-40a3c1aa9ce7.png)
+![SearchPage](https://user-images.githubusercontent.com/80877621/196797178-88e7926f-93b4-44a5-bec0-9abab4506556.png)
