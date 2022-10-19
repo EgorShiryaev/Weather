@@ -18,5 +18,5 @@
 - flutter run
 
 # Скрины приложения
-![HomePage](https://user-images.githubusercontent.com/80877621/196797781-f5ac9adc-ee07-4aa6-b291-4a1278d6faba.png)
-![SearchPage](https://user-images.githubusercontent.com/80877621/196797784-2deb1ced-49de-4259-9ae4-32344912b69a.png)
+![HomePage](https://user-images.githubusercontent.com/80877621/196797997-3129c1be-4e5d-440f-a8b4-ea70143d15f8.png)
+![SearchPage](https://user-images.githubusercontent.com/80877621/196798000-d7bbdf84-1a1d-4f30-9d9f-690d390a3079.png)
