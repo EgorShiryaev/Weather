@@ -1,16 +1,17 @@
-# weather_mob_app
+# Введение 
+WeatherMobileApp - мобильное приложения для просмотра погоды
+Цель проекта
+Реализованный для изучения Flutter.
+TODO: кратко опишите проект. В этом разделе объясняются цели и задачи этого проекта. 
 
-A new Flutter project.
+# Начало работы
+Необходим Flutter 2.12 и выше
+Приложение использует API:
+1. search.maps.sputnik.ru - координаты по адресу (API не поддерживается)
+2. openweathermap.org (https://openweathermap.org/) - данные погоды (Необходим API key)
+3. google place (https://developers.google.com/maps/documentation/places/web-service/overview) - поиск места (Необходим API key)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Сборка и тестирование
+Для сборки приложения необходимо в терминале выполнить команды:
+- flutter pub get
+- flutter run
