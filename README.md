@@ -19,6 +19,6 @@
 - flutter run
 
 # Скрины
-![LoadingPage](https://user-images.githubusercontent.com/80877621/196799182-cb22c161-0775-41c7-b2a8-c5b5368575e2.png)
-![HomeScreen](https://user-images.githubusercontent.com/80877621/196799212-c8749407-4389-45d2-bafe-586ef88d6b5e.png)
-![SearchScreen](https://user-images.githubusercontent.com/80877621/196799249-95f79e79-3d2b-411b-8eb5-4cf51fd70a2a.png)
+![LoadingPage](https://user-images.githubusercontent.com/80877621/196800859-f47eb013-2b02-4431-83a5-35928aad94d5.png)
+![HomePage](https://user-images.githubusercontent.com/80877621/196800898-a11d8cd7-3a0d-40c9-9f95-4f72a4baf15b.png)
+![SearchPage](https://user-images.githubusercontent.com/80877621/196800965-3a99e647-438f-4412-aadd-c600135b7938.png)
