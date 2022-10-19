@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_mobile_app/core/constants/constants.dart';
 import 'package:weather_mobile_app/core/size/size.dart';
-import 'package:weather_mobile_app/core/util/location.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/cubit/weather_info_cubit.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/cubit/weather_info_state.dart';
 import 'package:weather_mobile_app/features/weather_info/presentation/widgets/body_state/empty_state.dart';
