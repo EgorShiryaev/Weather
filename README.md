@@ -39,9 +39,10 @@ flutter run
 
 ## Разработка
 
-- [API координаты по адресу(API не поддерживается)](search.maps.sputnik.ru)
-- [API данные погоды (Необходим API key)]( https://openweathermap.org)
-- [API поиск места](https://developers.google.com/maps/documentation/places/web-service/overview)
+Мобильное приложение использует несколько API:
+- [Координаты по адресу(API не поддерживается)](search.maps.sputnik.ru)
+- [Данные погоды (Необходим API key)]( https://openweathermap.org)
+- [Поиск места](https://developers.google.com/maps/documentation/places/web-service/overview)
 
 ## Скрины
 
